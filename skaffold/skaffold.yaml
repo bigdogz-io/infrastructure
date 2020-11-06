@@ -1,0 +1,18 @@
+apiVersion: skaffold/v2beta5
+kind: Config
+build:
+  local: {}
+  tagPolicy:
+    gitCommit: {}
+  artifacts:
+  - image: [IMAGE NAME]
+    buildpacks:
+      builder: "gcr.io/buildpacks/builder:v1"
+deploy:
+  helm:
+    releases:
+    - name: [SERVICE NAME]
+      chartPath: helm/[SERVICE NAME]
+      artifactOverrides:
+        image: [IMAGE NAME]
+
