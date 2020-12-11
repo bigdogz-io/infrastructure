@@ -7,4 +7,7 @@ Templates and other infrastructure based tools.
 * skaffold
 * helm
 * buildpacks
+* RabbitMQ
+* MongoDB
+* Postgresql
 
